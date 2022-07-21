@@ -1,0 +1,64 @@
+<!DOCTYPE validators PUBLIC "-//Apache Struts//XWork Validator 1.0.3//EN"
+    "http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+<validators>
+  <validator type="requiredstring">
+    <param name="fieldName">bookEntryBean.title</param>
+    <message>Title is required.</message>
+  </validator>
+  <validator type="stringlength">
+    <param name="fieldName">bookEntryBean.title</param>
+    <param name="maxLength">500</param>
+    <message>Title cannot exceed 500 characters.</message>
+  </validator>
+
+  <validator type="requiredstring">
+    <param name="fieldName">bookEntryBean.authors</param>
+    <message>Author(s) required.</message>
+  </validator>
+  <validator type="stringlength">
+    <param name="fieldName">bookEntryBean.authors</param>
+    <param name="maxLength">500</param>
+    <message>Author(s) cannot exceed 500 characters.</message>
+  </validator> 
+
+  <validator type="requiredstring">
+    <param name="fieldName">bookEntryBean.ISBN</param>
+    <message>ISBN is required.</message>
+  </validator>
+  <validator type="stringlength">
+    <param name="fieldName">bookEntryBean.ISBN</param>
+    <param name="maxLength">13</param>
+    <message>ISBN cannot exceed 13 characters.</message>
+  </validator>
+
+  <field name="bookEntryBean.pageCount">
+      <field-validator type="required">
+          <message>Page Count is required.</message>
+      </field-validator>
+      <field-validator type="int">
+          <param name="min">1</param>
+          <message>Page Count must be greater than 0.</message>
+      </field-validator>
+  </field>
+
+  <validator type="requiredstring">
+    <param name="fieldName">bookEntryBean.publisher</param>
+    <message>Publisher is required.</message>
+  </validator>
+  <validator type="stringlength">
+    <param name="fieldName">bookEntryBean.publisher</param>
+    <param name="maxLength">50</param>
+    <message>Publisher cannot exceed 100 characters.</message>
+  </validator> 
+
+  <field name="bookEntryBean.publishedDate">
+      <field-validator type="required">
+          <message>Published Date is required.</message>
+      </field-validator>
+  </field>
+
+   <validator type="requiredstring">
+    <param name="fieldName">bookEntryBean.genre</param>
+    <message>Genre is required.</message>
+  </validator>   
+</validators>

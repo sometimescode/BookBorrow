@@ -1,0 +1,26 @@
+body {
+    background: url('http://localhost:8080/app/images/pexels-mentatdgt-1319854.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+body.profile {
+  background: url('http://localhost:8080/app/images/pexels-ricardo-esquivel-1926988.jpg') no-repeat center center fixed;
+}
+
+body.admin {
+  background: url('http://localhost:8080/app/images/pexels-ricardo-esquivel-1907784.jpg') no-repeat center center fixed;
+}
+
+form ul.text-danger li {
+  list-style: none;
+}
+form ul.text-danger li:before {
+  content: "\F432";
+  font-family: "bootstrap-icons";
+  padding-right: 5px;
+  position: relative;
+  top: 3px;
+}

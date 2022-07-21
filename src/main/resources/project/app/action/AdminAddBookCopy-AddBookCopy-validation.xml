@@ -1,0 +1,23 @@
+<!DOCTYPE validators PUBLIC "-//Apache Struts//XWork Validator 1.0.3//EN"
+    "http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+<validators>
+  <validator type="requiredstring">
+    <param name="fieldName">bookCopyBean.serialId</param>
+    <message>Serial Id is required.</message>
+  </validator>
+  <validator type="stringlength">
+    <param name="fieldName">bookCopyBean.serialId</param>
+    <param name="maxLength">20</param>
+    <message>Serial Id cannot exceed 20 characters.</message>
+  </validator>
+
+  <field name="bookCopyBean.purchasePrice">
+      <field-validator type="required">
+          <message>Purchase Price is required.</message>
+      </field-validator>
+      <field-validator type="int">
+          <param name="min">1</param>
+          <message>Purchase Price must be greater than 0.</message>
+      </field-validator>
+  </field>
+</validators>
